@@ -8,14 +8,14 @@ public class User {
     private int age;
     private String email;
 
-    public User(String firstName, String lastName, int age, String email) {
+    public User(final String firstName, final String lastName, final int age, final String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.email = email;
     }
 
-    public void setFirstName(String firstName) {
+    public void setFirstName(final String firstName) {
         this.firstName = firstName;
     }
 
@@ -27,7 +27,7 @@ public class User {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+    public void setLastName(final String lastName) {
         this.lastName = lastName;
     }
 
@@ -35,7 +35,8 @@ public class User {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(final int age) {
+
         this.age = age;
     }
 
@@ -43,15 +44,16 @@ public class User {
         return email;
     }
 
-    public void setEmail(String email) {
+    public void setEmail(final String email) {
+
         this.email = email;
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(final Object o) {
         if (this == o) return true;
         if (!(o instanceof User)) return false;
-        User user = (User) o;
+        final User user = (User) o;
         return getAge() == user.getAge() && Objects.equals(getFirstName(),
                 user.getFirstName()) && Objects.equals(getLastName(),
                 user.getLastName()) && Objects.equals(getEmail(),

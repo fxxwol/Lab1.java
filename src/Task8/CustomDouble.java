@@ -6,11 +6,11 @@ public class CustomDouble {
     private final int integer;
     private final double decimal;
 
-    public CustomDouble(double number){
+    public CustomDouble(final double number){
         integer = (int)number;
         decimal = number - (int)number;
     }
-    public CustomDouble (int integer, double decimal) throws Exception{
+    public CustomDouble (final int integer, final double decimal) throws Exception{
         this.integer = integer;
         if(decimal < 1){
             this.decimal = decimal;
@@ -19,15 +19,15 @@ public class CustomDouble {
             throw new Exception("decimal should be less than 1");
         }
     }
-    public CustomDouble add(CustomDouble number) {
-        double sum = toDouble() + number.toDouble();
+    public CustomDouble add(final CustomDouble number) {
+        final double sum = toDouble() + number.toDouble();
         return new CustomDouble(sum);
     }
-    public CustomDouble sub(CustomDouble number) {
-        double sub = toDouble() - number.toDouble();
+    public CustomDouble sub(final CustomDouble number) {
+        final double sub = toDouble() - number.toDouble();
         return new CustomDouble(sub);
     }
-    public String compare(CustomDouble number2){
+    public String compare(final CustomDouble number2){
         if(toDouble() == number2.toDouble()){
             return "number1 = number2";
         }
@@ -48,10 +48,10 @@ public class CustomDouble {
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(final Object o) {
         if (this == o) return true;
         if (!(o instanceof CustomDouble)) return false;
-        CustomDouble that = (CustomDouble) o;
+        final CustomDouble that = (CustomDouble) o;
         return integer == that.integer && Double.compare(that.decimal, decimal) == 0;
     }
 
