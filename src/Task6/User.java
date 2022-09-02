@@ -1,4 +1,4 @@
-package Task6.User;
+package Task6;
 
 import java.util.Objects;
 

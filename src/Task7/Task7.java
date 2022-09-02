@@ -1,6 +1,5 @@
 package Task7;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +15,7 @@ public class Task7 {
     }
 
     public static void main(String[] args) {
-        final List<Pair> listOfProducts = new ArrayList<Pair>() {{
+        final List<Pair> listOfProducts = new ArrayList<>() {{
             add(new Pair(new Product("Apple", 10), 2));
             add(new Pair(new Product("Watermelon", 30), 1));
             add(new Pair(new Product("Grape", 15), 3));

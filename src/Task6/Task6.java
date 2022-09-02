@@ -1,7 +1,5 @@
 package Task6;
 
-import Task6.User.User;
-
 public class Task6 {
     public static void main(String[] args) {
         User user1 = new User("Roksolana", "Protsiv", 18, "test1@gmail.com");
